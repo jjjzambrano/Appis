@@ -13,4 +13,5 @@ public class ClienteDTO {
     private Date fecha_nacimiento;
     private double monto_primera_compra;
     private Long tipo;
+    private String jjzj_propietario;
 }

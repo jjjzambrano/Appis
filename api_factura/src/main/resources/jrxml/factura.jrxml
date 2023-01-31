@@ -7,6 +7,7 @@
 	<parameter name="nombre_cliente" class="java.lang.String"/>
 	<parameter name="identificacion" class="java.lang.String"/>
 	<parameter name="lineasFactura" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="responsable" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -89,4 +90,22 @@
 			</subreport>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="40">
+			<staticText>
+				<reportElement x="290" y="5" width="76" height="30" uuid="19f2f4d2-0d1f-4e9d-98a5-0a59d605594d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hecho por:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="5" width="178" height="30" uuid="4cd95bb0-c518-46ed-842b-8765088e503b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{responsable}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
 </jasperReport>

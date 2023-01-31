@@ -8,3 +8,4 @@ class Persona (models.Model):
     fecha_nacimiento = models.DateField(auto_now=False, auto_now_add=False)
     monto_primera_compra = models.FloatField()
     tipo=models.ForeignKey(Tipo_persona,on_delete=models.PROTECT)
+    jjzj_propietario = models.CharField(max_length=80)
